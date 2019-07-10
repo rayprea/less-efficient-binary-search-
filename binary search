@@ -1,0 +1,11 @@
+def binary_search(list_, search):
+    if len(list_) == 0:
+        return False
+    middle = len(list_) // 2
+    if search == list_[middle]:
+        return True
+    else:
+        if search < list_[middle]:
+            return binary_search(list_[:middle], search)
+        else:
+            return binary_search(list_[middle + 1 : ], search)
